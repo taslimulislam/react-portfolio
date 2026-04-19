@@ -8,7 +8,8 @@ import { Tastimonials } from "@/layout/section/Tastimonials"
 
 function App() {
  
-  return <div className="min-h-screen overflow-x-hidden">
+  return (
+  <div className="min-h-screen overflow-x-hidden">
     <Navbar />
     <main>
       <Hero />
@@ -19,6 +20,7 @@ function App() {
       <Contact />
     </main>
   </div>
+  )
 }
 
 export default App
