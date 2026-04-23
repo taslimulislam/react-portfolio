@@ -1,26 +1,27 @@
-import { Navbar } from "@/layout/Navbar"
-import { About } from "@/layout/section/About"
-import { Contact } from "@/layout/section/Contact"
-import { Experience } from "@/layout/section/Experience"
-import { Hero } from "@/layout/section/Hero"
-import { Projects } from "@/layout/section/Projects"
-import { Tastimonials } from "@/layout/section/Tastimonials"
+import { Navbar } from "@/layout/Navbar";
+import { Hero } from "@/sections/Hero";
+import { About } from "@/sections/About";
+import { Projects } from "@/sections/Projects";
+import { Experience } from "@/sections/Experience";
+import { Testimonials } from "@/sections/Testimonials";
+import { Contact } from "@/sections/Contact";
+import { Footer } from "./layout/Footer";
 
 function App() {
- 
   return (
-  <div className="min-h-screen overflow-x-hidden">
-    <Navbar />
-    <main>
-      <Hero />
-      <About />
-      <Projects />
-      <Experience />
-      <Tastimonials />
-      <Contact />
-    </main>
-  </div>
-  )
+    <div className="min-h-screen overflow-x-hidden">
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Projects />
+        <Experience />
+        <Testimonials />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
