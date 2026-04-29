@@ -10,24 +10,25 @@ import {
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
 const skills = [
+  "PHP",
+  "Laravel",
+  "CodeIgniter",
+  "Rest API",
+  "Statamic CMS",
+  "Inertia.js",
+  "JavaScript",
   "React",
-  "Next.js",
   "TypeScript",
-  "Node.js",
-  "GraphQL",
-  "PostgreSQL",
-  "MongoDB",
-  "Redis",
-  "Docker",
-  "AWS",
-  "Vercel",
   "Tailwind CSS",
-  "Prisma",
-  "Jest",
-  "Cypress",
-  "Figma",
+  "AJAX",
+  "Bootstrap",
+  "jQuery",
+  "MySQL",
+  "DigitalOcean",
+  "SourceTree",
+  "Jira",
   "Git",
-  "GitHub Actions",
+  "ClickUp",
 ];
 
 export const Hero = () => {
@@ -46,7 +47,7 @@ export const Hero = () => {
       {/* Green Dots */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(30)].map((_, i) => (
-          <div
+          <div key={i}
             className="absolute w-1.5 h-1.5 rounded-full opacity-60"
             style={{
               backgroundColor: "#20B2A6",
@@ -69,7 +70,7 @@ export const Hero = () => {
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Software Engineer • React Specialist
+                Sr. Software Engineer • Laravel Specialist
               </span>
             </div>
 
@@ -85,18 +86,24 @@ export const Hero = () => {
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Hi, I'm Pedro Machado — a software engineer specializing in
-                React, Next.js, and TypeScript. I build scalable, performant web
-                applications that users love.
+                Hi, I'm Taslimul Islam — a Software Engineer specializing in
+                Laravel, CodeIgniter, Statamic CMS, Inertia.js, React, and TypeScript. I build scalable, high-performance web
+                applications with clean architecture, efficient backend systems, and seamless user experiences that users love.
               </p>
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-              <Button size="lg">
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in animation-delay-300">
+              <Button size="lg" className="w-full sm:w-auto" href="#contact">
                 Contact Me <ArrowRight className="w-5 h-5" />
               </Button>
-              <AnimatedBorderButton>
+              <AnimatedBorderButton
+                className="w-full sm:w-auto"
+                href="/Taslimul_Senior_Software_Engineer_CV.pdf"
+                download="Taslimul_Senior_Software_Engineer_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Download className="w-5 h-5" />
                 Download CV
               </AnimatedBorderButton>
@@ -106,13 +113,14 @@ export const Hero = () => {
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
               <span className="text-sm text-muted-foreground">Follow me: </span>
               {[
-                { icon: Github, href: "#" },
-                { icon: Linkedin, href: "#" },
-                { icon: Twitter, href: "#" },
+                { icon: Github, href: "https://github.com/taslimulislam" },
+                { icon: Linkedin, href: "https://www.linkedin.com/in/taslimul-islam" },
+                // { icon: Twitter, href: "#" },
               ].map((social, idx) => (
                 <a
                   key={idx}
                   href={social.href}
+                  target="_blank"
                   className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
                 >
                   {<social.icon className="w-5 h-5" />}
@@ -132,8 +140,8 @@ export const Hero = () => {
               />
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
-                  src="/profile-photo.jpg"
-                  alt="Pedro Machado"
+                  src="/profile-photo-2.jpeg"
+                  alt="Taslimul Islam"
                   className="w-full aspect-[4/5] object-cover rounded-2xl"
                 />
 
@@ -149,7 +157,7 @@ export const Hero = () => {
                 {/* Stats Badge */}
                 <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
                   <div className="text-2xl font-bold text-primary">5+</div>
-                  <div className="text-xs text-muted-foreground">
+                  <div className="text-xs font-medium">
                     Years Exp.
                   </div>
                 </div>
@@ -185,10 +193,7 @@ export const Hero = () => {
         </div>
       </div>
 
-      <div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 
-      animate-fade-in animation-delay-800"
-      >
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in animation-delay-800 z-10">
         <a
           href="#about"
           className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"

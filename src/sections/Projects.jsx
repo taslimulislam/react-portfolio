@@ -2,39 +2,57 @@ import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 const projects = [
   {
-    title: "Fintech Dashboard",
+    title: "YellowHouse",
     description:
-      "A comprehensive financial analytics platform with real-time data visualization, portfolio management, and AI-powered insights.",
-    image: "/projects/project1.png",
-    tags: ["React", "Typescript", "NodeJS"],
-    link: "#",
+      "A creative event management and exhibition platform for delivering immersive event experiences and business solutions.",
+    image: "/projects/yellowhouse.png",
+    tags: ["Statamic CMS", "React", "Typescript", "Tailwind CSS"],
+    link: "",
     github: "#",
   },
   {
-    title: "E-Commerce Platform",
+    title: "PayMoney",
     description:
-      "A full-featured e-commerce solution with inventory management, payment processing, and analytics dashboard.",
-    image: "/projects/project2.png",
-    tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
-    link: "#",
+      "A secure online payment gateway system for managing digital transactions",
+    image: "/projects/paymoney.png",
+    tags: ["Laravel", "jQuery", "MySQL", "Bootstrap"],
+    link: "https://demo.paymoney.techvill.net/",
     github: "#",
   },
   {
-    title: "AI Writing Assistant",
+    title: "Artifism",
     description:
-      "An intelligent writing tool powered by GPT-4, helping users create better content faster.",
-    image: "/projects/project3.png",
-    tags: ["React", "OpenAI", "Python", "FastAPI"],
-    link: "#",
+      "A SaaS platform for generating AI-powered content and images for digital marketing.",
+    image: "/projects/artifism.png",
+    tags: ["Laravel", "jQuery", "MySQL", "React", "Bootstrap"],
+    link: "https://demo.artifism.techvill.net/",
     github: "#",
   },
   {
-    title: "Project Management Tool",
+    title: "Martvill",
     description:
-      "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
-    image: "/projects/project4.png",
-    tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
-    link: "#",
+      "A multivendor eCommerce platform offering product management, vendor control, and order tracking features.",
+    image: "/projects/martvill.png",
+    tags: ["Laravel", "jQuery", "MySQL", "React", "Bootstrap"],
+    link: "https://demo.martvill.techvill.net/",
+    github: "#",
+  },
+  {
+    title: "Hotel Management System",
+    description:
+      "A complete hotel management solution including reservations, room service, and billing.",
+    image: "/projects/hotel.png",
+    tags: ["CodeIgniter", "jQuery", "MySQL"],
+    link: "https://xainhotellatest.bdtask-demo.com",
+    github: "#",
+  },
+  {
+    title: "Restaurant Management System",
+    description:
+      "A web-based POS and restaurant management platform for managing orders, tables, and menus.",
+    image: "/projects/bhojon.png",
+    tags: ["CodeIgniter", "jQuery", "MySQL"],
+    link: "https://bhojonlatest.bdtask-demo.com/",
     github: "#",
   },
 ];
@@ -59,8 +77,8 @@ export const Projects = () => {
             </span>
           </h2>
           <p className="text-muted-foreground animate-fade-in animation-delay-200">
-            A selection of my recent work, from complex web applications to
-            innovative tools that solve real-world problems.
+            A selection of my recent work, ranging from scalable web applications 
+            to practical software solutions designed to solve real-world business challenges.
           </p>
         </div>
 
@@ -85,19 +103,22 @@ export const Projects = () => {
                  to-transparent opacity-60"
                 />
                 {/* Overlay Links */}
-                <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <a
+                <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+                  {project.link != "" &&
+                    <a
                     href={project.link}
+                    target="_blank"
                     className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
                   >
                     <ArrowUpRight className="w-5 h-5" />
                   </a>
-                  <a
+                  }
+                  {/* <a
                     href={project.github}
                     className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
                   >
                     <Github className="w-5 h-5" />
-                  </a>
+                  </a> */}
                 </div>
               </div>
 
@@ -107,12 +128,12 @@ export const Projects = () => {
                   <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  <ArrowUpRight
+                  {/* <ArrowUpRight
                     className="w-5 h-5 
                   text-muted-foreground group-hover:text-primary
                    group-hover:translate-x-1 
                    group-hover:-translate-y-1 transition-all"
-                  />
+                  /> */}
                 </div>
                 <p className="text-muted-foreground text-sm">
                   {project.description}
@@ -133,12 +154,12 @@ export const Projects = () => {
         </div>
 
         {/* View All CTA */}
-        <div className="text-center mt-12 animate-fade-in animation-delay-500">
+        {/* <div className="text-center mt-12 animate-fade-in animation-delay-500">
           <AnimatedBorderButton>
             View All Projects
             <ArrowUpRight className="w-5 h-5" />
           </AnimatedBorderButton>
-        </div>
+        </div> */}
       </div>
     </section>
   );
